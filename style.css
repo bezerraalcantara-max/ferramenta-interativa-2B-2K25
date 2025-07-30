@@ -1,9 +1,7 @@
-@media (max-width: 560px) {
-    
-    body {
-        background: url('img/bg-mobile.webp'), no-repeat cover;
-    }
-
+body {
+    background: url('img/bg-desktop.webp');
+    font-family: Bai Jamjuree;
+}
 footer {
     background-color: black;
     color: white;
