@@ -1,11 +1,11 @@
 body {
-    background: url('img/bg-desktop.webp');
+    background-color: bisque;
     font-family: Bai Jamjuree;
 }
 
 footer {
     background-color: black;
-    color: white;
+    color: aliceblue;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -13,7 +13,7 @@ footer {
 
     footer p {
         text-align: center;
-        font-size: 0.6rem;
+        font-size: 1rem;
         margin-top: 0.5rem;
     }
 
