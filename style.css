@@ -2,6 +2,7 @@ body {
     background: url('img/bg-desktop.webp');
     font-family: Bai Jamjuree;
 }
+
 footer {
     background-color: black;
     color: white;
@@ -11,7 +12,20 @@ footer {
     height: 2rem;
 
     footer p {
-    text-align: center;
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-}
+        text-align: center;
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+    }
+
+    #container {
+        display: flex;
+
+    }
+
+    .cartao {
+        margin: 1rem, 1rem;
+        background-color: aqua;
+        height: 20rem;
+        flex-grow: 1;
+
+    }
