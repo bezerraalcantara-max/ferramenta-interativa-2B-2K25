@@ -41,14 +41,15 @@ footer{
  
     }
 
-    .cartao__conteudo{
+    .cartao__conteudo{     
 text-align: center;
-background-color: aquamarine;
+background-color: var(--card-front-color);
 height: 100%;
 
     }
 
     .cartao__conteudo h3{
+        
 color: var(--text-color);
 border: 1px solid var(--text-color);
 
