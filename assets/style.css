@@ -49,7 +49,9 @@ height: 100%;
     }
 
     .cartao__conteudo h3{
-background-color: blueviolet;
+color: var(--text-color);
+border: 1px solid var(--text-color);
+
 text-align: left;
 padding: 0.5rem;
 position: absolute;
