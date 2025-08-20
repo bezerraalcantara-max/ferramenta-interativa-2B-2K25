@@ -45,6 +45,7 @@ footer{
 text-align: center;
 background-color: var(--card-front-color);
 height: 100%;
+transform-style: preserve-3d;
 
     }
 
@@ -59,13 +60,14 @@ position: absolute;
 margin: 0.6rem;
 border-radius: 0.6rem;
 font-size: 1vw;
+ }
 
-    }
 .cartao__conteudo__pergunta p{
 color: var(--text-color);
 font-weight: 500;
 
 }
+
 .cartao__conteudo__resposta p{
 color: var(--card-back-color);
 font-weight: 700;
