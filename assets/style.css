@@ -1,105 +1,136 @@
+/*
+  Define variáveis CSS que podem ser reutilizadas em todo o código.
+  Isso facilita a alteração de cores e outros valores de forma global.
+*/
 :root {
-    --text-color: #DBE4EF;
-    --card-front-color: #144480;
-    --card-back-color: #00F4BF;
+    --text-color: #DBE4EF;       /* Cor principal do texto */
+    --card-front-color: #144480; /* Cor da frente do cartão */
+    --card-back-color: #00F4BF;  /* Cor do verso do cartão */
 }
-
-
-
+ 
+/*
+  Define o estilo para o corpo da página.
+*/
 body {
-    background: url(img/bg-desktop.webp);
-    font-family: Bai Jamjuree;
+    background: url(img/bg-desktop.webp); /* Define uma imagem de fundo para a página */
+    font-family: Bai Jamjuree;            /* Define a fonte do texto para toda a página */
 }
-
+ 
+/*
+  Define o estilo para o rodapé da página.
+*/
 footer {
-    background-color: black;
-    color: aliceblue;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2rem;
+    background-color: black;    /* Cor de fundo do rodapé */
+    color: aliceblue;           /* Cor do texto do rodapé */
+    position: fixed;            /* Faz com que o rodapé fique fixo na tela */
+    bottom: 0;                  /* Posiciona o rodapé na parte inferior da tela */
+    width: 100%;                /* Ocupa a largura total da tela */
+    height: 2rem;               /* Altura fixa do rodapé */
 }
-
+ 
+/*
+  Estiliza o parágrafo dentro do rodapé.
+*/
 footer p {
-    text-align: center;
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
+    text-align: center;         /* Centraliza o texto */
+    font-size: 0.6rem;          /* Tamanho da fonte */
+    margin-top: 0.5rem;         /* Margem superior para o texto */
 }
-
+ 
+/*
+  Define o estilo para o contêiner que agrupa os cartões.
+*/
 #container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 4rem;
-
+    display: flex;              /* Usa Flexbox para o layout */
+    flex-wrap: wrap;            /* Permite que os itens "quebrem" para a próxima linha */
+    justify-content: space-between; /* Distribui os itens uniformemente com espaço entre eles */
+    padding: 4rem;              /* Espaçamento interno */
 }
-
+ 
+/*
+  Estiliza cada cartão de estudo.
+*/
 .cartao {
-    margin: 1rem 1rem;
-    height: 20rem;
-    flex-grow: 1;
-    flex-basis: calc(33%-6rem);
-
+    margin: 1rem 1rem;              /* Margem ao redor de cada cartão */
+    height: 20rem;                  /* Altura fixa do cartão */
+    flex-grow: 1;                   /* Permite que o cartão cresça para preencher o espaço disponível */
+    flex-basis: calc(33% - 6rem);   /* Define a largura base, ocupando cerca de um terço do contêiner */
 }
-
+ 
+/*
+  Estiliza o conteúdo interno do cartão.
+*/
 .cartao__conteudo {
-    text-align: center;
-    background-color: var(--card-front-color);
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 300ms ease-in-out;
-
+    text-align: center;             /* Centraliza o texto dentro do conteúdo */
+    background-color: var(--card-front-color); /* Cor de fundo da frente do cartão */
+    height: 100%;                   /* Ocupa 100% da altura do cartão */
+    transform-style: preserve-3d;   /* Habilita a transformação 3D, essencial para o efeito de virar */
+    transition: transform 300ms ease-in-out; /* Adiciona uma transição suave para a rotação */
 }
-
+ 
+/*
+  Estiliza o cabeçalho (h3) dentro do conteúdo do cartão.
+*/
 .cartao__conteudo h3 {
-
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
-
-    text-align: left;
-    padding: 0.5;
-    position: absolute;
-    margin: 0.6;
-    border-radius: 0.6rem;
-    font-size: 1vw;
-    backface-visibility: hidden;
+    color: var(--text-color);               /* Cor do texto do cabeçalho */
+    border: 1px solid var(--text-color);    /* Adiciona uma borda */
+    text-align: left;                       /* Alinha o texto à esquerda */
+    padding: 0.5;                           /* Preenchimento */
+    position: absolute;                     /* Permite o posicionamento absoluto dentro do contêiner */
+    margin: 0.6;                            /* Margem */
+    border-radius: 0.6rem;                  /* Arredonda as bordas */
+    font-size: 1vw;                         /* Tamanho da fonte, relativo à largura da tela */
+    backface-visibility: hidden;            /* Esconde a parte de trás do elemento quando ele está virado */
 }
-
-
+ 
+/*
+  Estiliza os parágrafos dentro do conteúdo do cartão.
+*/
 .cartao__conteudo p {
-    margin-top: 1rem;
-    padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;       /* Margem superior */
+    padding: 2rem;          /* Preenchimento */
+    margin-top: 4rem;       /* Margem superior adicional */
 }
-
+ 
+/*
+  Estiliza o parágrafo da pergunta.
+*/
 .cartao__conteudo__pergunta p {
-    color: var(--text-color);
-    font-weight: 500;
-
+    color: var(--text-color);   /* Cor do texto da pergunta */
+    font-weight: 500;           /* Peso da fonte */
 }
-
+ 
+/*
+  Estiliza o parágrafo da resposta.
+*/
 .cartao__conteudo__resposta p {
-    color: var(--card-back-color);
-    font-weight: 700;
-
-
+    color: var(--card-back-color);  /* Cor do texto da resposta */
+    font-weight: 700;               /* Peso da fonte */
 }
-
+ 
+/*
+  Define o efeito de virar o cartão quando o mouse passa sobre ele.
+  O conteúdo do cartão é rotacionado em 180 graus no eixo Y.
+*/
 .cartao:hover .cartao__conteudo {
     transform: rotateY(180deg);
-
 }
-
+ 
+/*
+  Estiliza os contêineres da pergunta e da resposta.
+*/
 .cartao__conteudo__pergunta,
 .cartao__conteudo__resposta {
-    backface-visibility: hidden;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
+    backface-visibility: hidden;    /* Esconde a parte de trás do elemento quando ele está virado */
+    position: absolute;             /* Posicionamento absoluto, necessário para sobrepor os elementos */
+    height: 100%;                   /* Ocupa 100% da altura do contêiner */
+    width: 100%;                    /* Ocupa 100% da largura do contêiner */
 }
-
+ 
+/*
+  Gira o contêiner da resposta em 180 graus.
+  Isso faz com que a resposta fique escondida na "parte de trás" do cartão inicialmente.
+*/
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
-
 }
